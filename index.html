@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Como Entrar no Mercado de Drones | Guia Completo</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+            background: #0a0f1a;
+            color: #e2e8f0;
+            line-height: 1.6;
+        }
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        /* Hero */
+        .hero {
+            background: linear-gradient(180deg, #0f172a 0%, #0a0f1a 100%);
+            padding: 60px 20px 50px;
+            text-align: center;
+            border-bottom: 1px solid #1e293b;
+        }
+        .badge {
+            display: inline-block;
+            background: #1e3a5f;
+            color: #38bdf8;
+            font-size: 13px;
+            font-weight: 600;
+            padding: 6px 16px;
+            border-radius: 50px;
+            margin-bottom: 20px;
+            letter-spacing: 0.5px;
+        }
+        .hero h1 {
+            font-size: clamp(28px, 5vw, 42px);
+            font-weight: 800;
+            color: #fff;
+            margin-bottom: 16px;
+            line-height: 1.2;
+        }
+        .hero h1 span {
+            color: #38bdf8;
+        }
+        .hero p {
+            font-size: 18px;
+            color: #94a3b8;
+            max-width: 600px;
+            margin: 0 auto 30px;
+        }
+        .stats {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            flex-wrap: wrap;
+            margin: 30px 0 40px;
+        }
+        .stat {
+            text-align: center;
+        }
+        .stat strong {
+            display: block;
+            font-size: 28px;
+            color: #22c55e;
+            font-weight: 800;
+        }
+        .stat span {
+            font-size: 13px;
+            color: #94a3b8;
+        }
+        .btn {
+            display: inline-block;
+            background: linear-gradient(135deg, #22c55e, #16a34a);
+            color: #fff;
+            font-size: 18px;
+            font-weight: 700;
+            padding: 18px 40px;
+            border-radius: 12px;
+            text-decoration: none;
+            box-shadow: 0 10px 30px rgba(34, 197, 94, 0.3);
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+        .btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 15px 40px rgba(34, 197, 94, 0.4);
+        }
+        .btn-center {
+            display: block;
+            text-align: center;
+            margin: 40px auto 10px;
+            width: fit-content;
+        }
+        /* Sections */
+        section {
+            padding: 60px 20px;
+        }
+        h2 {
+            font-size: 28px;
+            font-weight: 800;
+            color: #fff;
+            text-align: center;
+            margin-bottom: 15px;
+        }
+        .subtitle {
+            text-align: center;
+            color: #94a3b8;
+            margin-bottom: 40px;
+            font-size: 17px;
+        }
+        /* Benefits */
+        .benefits-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            gap: 20px;
+            margin-top: 30px;
+        }
+        .benefit-card {
+            background: #111827;
+            border: 1px solid #1e293b;
+            border-radius: 16px;
+            padding: 28px;
+            transition: border-color 0.2s;
+        }
+        .benefit-card:hover {
+            border-color: #38bdf8;
+        }
+        .benefit-card h3 {
+            font-size: 18px;
+            color: #38bdf8;
+            margin-bottom: 10px;
+        }
+        .benefit-card p {
+            color: #94a3b8;
+            font-size: 15px;
+        }
+        /* Modules */
+        .modules {
+            background: #0f172a;
+        }
+        .module-list {
+            display: grid;
+            gap: 12px;
+            max-width: 700px;
+            margin: 0 auto;
+        }
+        .module-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 16px;
+            background: #111827;
+            border-radius: 12px;
+            padding: 18px 22px;
+            border-left: 4px solid #38bdf8;
+        }
+        .module-num {
+            background: #1e3a5f;
+            color: #38bdf8;
+            font-weight: 700;
+            font-size: 14px;
+            min-width: 36px;
+            height: 36px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 8px;
+        }
+        .module-item strong {
+            color: #fff;
+            display: block;
+            margin-bottom: 2px;
+        }
+        .module-item span {
+            color: #94a3b8;
+            font-size: 14px;
+        }
+        /* CTA Final */
+        .final-cta {
+            background: linear-gradient(180deg, #0f172a, #0a0f1a);
+            text-align: center;
+            padding: 70px 20px;
+            border-top: 1px solid #1e293b;
+        }
+        .final-cta h2 {
+            margin-bottom: 12px;
+        }
+        .final-cta p {
+            color: #94a3b8;
+            max-width: 500px;
+            margin: 0 auto 30px;
+        }
+        .price-box {
+            background: #111827;
+            border: 1px solid #1e293b;
+            border-radius: 16px;
+            padding: 30px;
+            max-width: 400px;
+            margin: 0 auto 30px;
+        }
+        .price-box .old {
+            color: #64748b;
+            text-decoration: line-through;
+            font-size: 18px;
+        }
+        .price-box .current {
+            font-size: 42px;
+            font-weight: 800;
+            color: #22c55e;
+            margin: 8px 0;
+        }
+        .price-box .note {
+            font-size: 14px;
+            color: #94a3b8;
+        }
+        footer {
+            text-align: center;
+            padding: 30px;
+            color: #64748b;
+            font-size: 13px;
+            border-top: 1px solid #1e293b;
+        }
+        @media (max-width: 600px) {
+            .stats { gap: 20px; }
+            .stat strong { font-size: 22px; }
+            .btn { width: 100%; padding: 16px; }
+            .btn-center { width: 100%; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- HERO -->
+    <header class="hero">
+        <div class="container">
+            <div class="badge">GUIA DE ACELERAÇÃO PROFISSIONAL</div>
+            <h1>Como Entrar no Mercado de <span>Drones</span></h1>
+            <p>O setor que mais cresce no Brasil. Aprenda estratégias práticas, equipamentos, regulamentação e modelos de negócio para começar a faturar.</p>
+            
+            <div class="stats">
+                <div class="stat">
+                    <strong>+190 mil</strong>
+                    <span>Drones na ANAC</span>
+                </div>
+                <div class="stat">
+                    <strong>R$ 2,5 BI+</strong>
+                    <span>Projeção de Mercado</span>
+                </div>
+                <div class="stat">
+                    <strong>+22% a.a.</strong>
+                    <span>Crescimento Anual</span>
+                </div>
+            </div>
+
+            <a href="https://pay.hotmart.com/R108253186U" class="btn">Quero Entrar no Mercado Agora →</a>
+        </div>
+    </header>
+
+    <!-- BENEFÍCIOS -->
+    <section>
+        <div class="container">
+            <h2>Por que este mercado é uma oportunidade real?</h2>
+            <p class="subtitle">Dados concretos que mostram o potencial de quem entra agora</p>
+            
+            <div class="benefits-grid">
+                <div class="benefit-card">
+                    <h3>68% é Agronegócio</h3>
+                    <p>Pulverização e mapeamento de safras lideram os investimentos. Um dos nichos com maior demanda e recorrência de serviço.</p>
+                </div>
+                <div class="benefit-card">
+                    <h3>Escassez de Mão de Obra</h3>
+                    <p>Drones cobrem grandes áreas em fração do tempo. Quem sabe operar tem demanda garantida no campo e na cidade.</p>
+                </div>
+                <div class="benefit-card">
+                    <h3>Alta Rentabilidade</h3>
+                    <p>Serviços de inspeção, topografia e pulverização pagam bem. Muitos profissionais faturam alto com poucos equipamentos.</p>
+                </div>
+                <div class="benefit-card">
+                    <h3>Barreira de Entrada Baixa</h3>
+                    <p>É possível começar com investimento controlado e escalar. O guia mostra exatamente o caminho mais inteligente.</p>
+                </div>
+            </div>
+
+            <!-- Botão extra 1 -->
+            <a href="https://pay.hotmart.com/R108253186U" class="btn btn-center">Quero Começar Agora por R$ 20 →</a>
+        </div>
+    </section>
+
+    <!-- O QUE VOCÊ VAI APRENDER -->
+    <section class="modules">
+        <div class="container">
+            <h2>O que você vai dominar neste guia</h2>
+            <p class="subtitle">Conteúdo completo e prático para você sair do zero e começar a operar</p>
+            
+            <div class="module-list">
+                <div class="module-item">
+                    <div class="module-num">01</div>
+                    <div>
+                        <strong>O Panorama do Mercado</strong>
+                        <span>Dados reais, faturamento e forças que impulsionam o setor no Brasil</span>
+                    </div>
+                </div>
+                <div class="module-item">
+                    <div class="module-num">02</div>
+                    <div>
+                        <strong>Aplicações Práticas</strong>
+                        <span>Agronegócio, topografia, engenharia, inspeções industriais e audiovisual</span>
+                    </div>
+                </div>
+                <div class="module-item">
+                    <div class="module-num">03</div>
+                    <div>
+                        <strong>Hardware e Equipamentos</strong>
+                        <span>Guia técnico de escolha de aeronaves e sensores (sem gastar à toa)</span>
+                    </div>
+                </div>
+                <div class="module-item">
+                    <div class="module-num">04</div>
+                    <div>
+                        <strong>Regulamentação Completa</strong>
+                        <span>Novo RBAC nº 100, ANAC, DECEA e como se legalizar corretamente</span>
+                    </div>
+                </div>
+                <div class="module-item">
+                    <div class="module-num">05</div>
+                    <div>
+                        <strong>Pós-Processamento</strong>
+                        <span>Softwares de mapeamento e como entregar relatórios técnicos profissionais</span>
+                    </div>
+                </div>
+                <div class="module-item">
+                    <div class="module-num">06</div>
+                    <div>
+                        <strong>Modelos de Negócio</strong>
+                        <span>Prestação de serviço, locação e operação B2B que realmente funcionam</span>
+                    </div>
+                </div>
+                <div class="module-item">
+                    <div class="module-num">07</div>
+                    <div>
+                        <strong>Vendas e Precificação</strong>
+                        <span>Como precificar por diária e fechar contratos de forma profissional</span>
+                    </div>
+                </div>
+                <div class="module-item">
+                    <div class="module-num">08</div>
+                    <div>
+                        <strong>Plano de Ação 90 Dias</strong>
+                        <span>Passo a passo prático para você sair do papel e começar a faturar</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Botão extra 2 -->
+            <a href="https://pay.hotmart.com/R108253186U" class="btn btn-center">Garantir meu acesso por R$ 20 →</a>
+        </div>
+    </section>
+
+    <!-- PARA QUEM É -->
+    <section>
+        <div class="container">
+            <h2>Para quem é este guia?</h2>
+            <p class="subtitle">Feito para quem quer resultados reais, não apenas teoria</p>
+            
+            <div class="benefits-grid">
+                <div class="benefit-card">
+                    <h3>✓ Iniciantes</h3>
+                    <p>Quem nunca operou um drone e quer entrar no mercado da forma correta, sem cometer erros caros.</p>
+                </div>
+                <div class="benefit-card">
+                    <h3>✓ Profissionais em transição</h3>
+                    <p>Quem busca uma nova fonte de renda ou mudança de carreira com alto potencial de crescimento.</p>
+                </div>
+                <div class="benefit-card">
+                    <h3>✓ Empreendedores</h3>
+                    <p>Quem quer montar um negócio sério de prestação de serviços com drones e escalar.</p>
+                </div>
+            </div>
+
+            <!-- Botão extra 3 -->
+            <a href="https://pay.hotmart.com/R108253186U" class="btn btn-center">Quero Meu Acesso Agora →</a>
+        </div>
+    </section>
+
+    <!-- CTA FINAL -->
+    <section class="final-cta">
+        <div class="container">
+            <h2>Comece agora a entrar no mercado que mais cresce no Brasil</h2>
+            <p>Tudo o que você precisa saber para sair do zero, se regularizar e começar a prestar serviços com drones de forma profissional.</p>
+            
+            <div class="price-box">
+                <div class="old">De R$ 97</div>
+                <div class="current">R$ 20</div>
+                <div class="note">Acesso imediato • Conteúdo completo • Atualizado</div>
+            </div>
+
+            <a href="https://pay.hotmart.com/R108253186U" class="btn">Quero Entrar no Mercado por R$ 20 →</a>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            © 2026 • Todos os direitos reservados<br>
+            Este produto não garante resultados financeiros. Os resultados dependem do esforço e aplicação de cada pessoa.
+        </div>
+    </footer>
+
+</body>
+</html>
